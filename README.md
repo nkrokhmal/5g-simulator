@@ -1,4 +1,4 @@
-# 5g-simulator
+# 5G-simulator
 
 
 ## Model description
