@@ -38,7 +38,9 @@ Install requirements
 ```
 pip install -r requirements.txt
 ```
-Run pff model
+Run models (you can choose between pff, srpt and random)
 ```
 python pff_simulate.py
+python srpt_simulate.py
+python random_simulate.py
 ```
