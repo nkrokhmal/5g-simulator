@@ -29,4 +29,16 @@ Optional arguments:
 | --minclients			     | 50         | minimum number of clients per base station
 | --meanclients			             | 20     	     | mean number of clients per base station
 | --sigmaclients		    | 5     	     | sigma of client number
-|
+
+
+## Run simulation
+
+
+Install requirements
+```
+pip install -r requirements.txt
+```
+Run pff model
+```
+python pff_simulate.py
+```
