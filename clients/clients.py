@@ -29,7 +29,7 @@ class Client:
             self.position = self.area.random_point()
 
         if not self.burst_data:
-            self.burst_data = random.uniform(20, 30)
+            self.burst_data = random.uniform(40, 60)
 
         if not self.lpa_data_rate:
             self.lpa_data_rate = random.uniform(9, 10)
@@ -103,8 +103,12 @@ class Clients:
                 client.is_active = False
 
     def iterate(self, data):
+
+        total_clients = 0
         for i, client in enumerate(self.active_clients):
             client_data = data[client.name].sum()
+            if client_data > 0:
+                total_clients += 1
             client.iterate(client_data)
 
         self.new_clients()
