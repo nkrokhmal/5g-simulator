@@ -15,18 +15,18 @@ Optional arguments:
 
 | Parameter                 | Default       | Description   |	
 | :------------------------ |:-------------:| :-------------|
-| -ep --epochs 	       |	100           | the duration of simulation process, total number of TTI 
-| -tti  --tti          | 0.001           | TTI duration in seconds
-| -minr --minradius 	       |	0.9	            | minimum radius of coverage area
-| -maxr --maxradius  		       | 1.1	           | maximum radius of coverage area
-| -x --x 		           | 1             | x length of area 
-| -y  --y 	        | 1           | y length of area 
-| -bs --bsnumber	         | 3             | number of base stations
-| -prb --prb          | 10           | number of prb for each base station
-| -k --k       | 1  | k-parameter for data rate   
-| -sigma --sigma    | 4         | sigma-parameter for data rate 
-| -maxc --maxclients			             | 12 	           | maximum number of clients per base station
-| -minc --minclients			     | 50         | minimum number of clients per base station
-| -meanc --meanclients			             | 20     	     | mean number of clients per base station
-| -sigmac --sigmaclients		    | 5     	     | sigma of client number
+| --epochs 	       |	100           | the duration of simulation process, total number of TTI 
+| --tti          | 0.001           | TTI duration in seconds
+| --minradius 	       |	0.9	            | minimum radius of coverage area
+| --maxradius  		       | 1.1	           | maximum radius of coverage area
+| --x 		           | 1             | x length of area 
+| --y 	        | 1           | y length of area 
+| --bsnumber	         | 3             | number of base stations
+| --prb          | 10           | number of prb for each base station
+| --k       | 1  | k-parameter for data rate   
+| --sigma    | 4         | sigma-parameter for data rate 
+| --maxclients			             | 12 	           | maximum number of clients per base station
+| --minclients			     | 50         | minimum number of clients per base station
+| --meanclients			             | 20     	     | mean number of clients per base station
+| --sigmaclients		    | 5     	     | sigma of client number
 |
