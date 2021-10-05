@@ -3,26 +3,28 @@ import math
 
 class BaseConfig:
     # Time parameters
-    EPOCHS = 100
-    TTI = 0.001
+    epochs = 100
+    tti = 0.001
 
     # Area parameters
-    RADIUS = [0.9, 1.1]
-    AREA = [1, 1]
+    min_radius = 0.9
+    max_radius = 1.1
+    x = 1
+    y = 1
 
     # Base station parameters
-    BS_NUMBER = 3
-    PRB = 10
+    bs_number = 3
+    prb = 10
 
     # Data rate parameters
-    K = 1
-    SIGMA = math.pi
+    k = 1
+    sigma = 4
 
     # Clients per base station parameters
-    MEAN_CLIENTS_PER_BS = 20
-    MAX_CLIENTS_PER_BS = 50
-    MIN_CLIENTS_PER_BS = 12
-    SIGMA_CLIENTS = 5
+    mean_clients = 20
+    max_clients = 50
+    min_clients = 12
+    sigma_clients = 5
 
 
 class RandomConfig(BaseConfig):
@@ -34,5 +36,5 @@ class SRPTConfig(BaseConfig):
 
 
 class PFFConfig(BaseConfig):
-    ALPHA = 2
-    BETA = 1
+    alpha = 2
+    beta = 1

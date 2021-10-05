@@ -49,7 +49,7 @@ class PFFSimulator(Simulator):
         )
 
         return active_se / lpa_data_rate_matrix * \
-               (1 + self.config.BETA * transmitted_ratio_matrix) * \
+               (1 + self.config.beta * transmitted_ratio_matrix ** self.config.alpha) * \
                self.allocation_matrix()
 
 

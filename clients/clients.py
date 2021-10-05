@@ -76,10 +76,10 @@ class Clients:
         self._init_params()
 
     def _init_params(self):
-        self.min_clients = self.config.MIN_CLIENTS_PER_BS * self.config.BS_NUMBER
-        self.max_clients = self.config.MAX_CLIENTS_PER_BS * self.config.BS_NUMBER
-        self.mean_clients = self.config.MEAN_CLIENTS_PER_BS * self.config.BS_NUMBER
-        self.sigma = self.config.SIGMA_CLIENTS
+        self.min_clients = self.config.min_clients * self.config.bs_number
+        self.max_clients = self.config.max_clients * self.config.bs_number
+        self.mean_clients = self.config.mean_clients * self.config.bs_number
+        self.sigma = self.config.sigma_clients
 
     def _init_clients(self):
         self.clients = [
@@ -88,7 +88,7 @@ class Clients:
                 area=self.bss,
                 beg_tti=0
             )
-            for i in range(self.config.MIN_CLIENTS_PER_BS * self.config.BS_NUMBER)]
+            for i in range(self.config.min_clients * self.config.bs_number)]
 
     @property
     def active_clients(self):
@@ -110,7 +110,7 @@ class Clients:
         self.new_clients()
 
     def new_clients(self):
-        self.current_tti += self.config.TTI
+        self.current_tti += self.config.tti
 
         new_clients_number = int(np.random.normal(self.mean_clients, self.sigma, 1)[0])
         new_clients_number = max(min(new_clients_number, self.max_clients), self.min_clients)
